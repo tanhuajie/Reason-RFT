@@ -47,7 +47,7 @@ Experimental results demonstrate Reasoning-RFT's three key advantages: **(1) Per
 ## 🗞️ News
 
 - **`2025-03-29`**: 🌍 We have released the [repository](https://github.com/tanhuajie/Reason-RFT/) and [roadmap](#RoadMap) for **Reason-RFT**.
-- **`2025-03-26`**: 📑 We have released our initial [ArXiv paper]((https://arxiv.org/abs/2503.20752/)) of **Reason-RFT**.
+- **`2025-03-26`**: 📑 We have released our initial [ArXiv paper](https://arxiv.org/abs/2503.20752/) of **Reason-RFT**.
 
 
 ## <a id="GeneralVisualTasks"> 🎲 General Visual Reasoning Tasks</a>
