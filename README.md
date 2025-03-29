@@ -1,11 +1,11 @@
 <div align="center">
-<img src="./assets/logo.png" width="250"/>
+<img src="./assets/logo.png" width="400"/>
 </div>
 
 # Reason-RFT: Reinforcement Fine-Tuning for Visual Reasoning.
 
 <p align="center">
-        </a>&nbsp&nbsp⭐️ <a href="https://tanhuajie.github.io/ReasonRFT/">Project</a></a>&nbsp&nbsp | &nbsp&nbsp🤗 <a href="">Hugging Face</a>&nbsp&nbsp | &nbsp&nbsp🌎 <a href="">Dataset</a>&nbsp&nbsp | &nbsp&nbsp📑 <a href="https://arxiv.org/abs/2503.20752">Paper</a>&nbsp&nbsp | &nbsp&nbsp💬 <a href="./assets/wechat.png">WeChat</a>
+        </a>&nbsp&nbsp⭐️ <a href="https://tanhuajie.github.io/ReasonRFT/">Project</a></a>&nbsp&nbsp | &nbsp&nbsp🤗 <a href="">Hugging Face</a>&nbsp&nbsp | &nbsp&nbsp🌎 <a href="">Dataset</a>&nbsp&nbsp | &nbsp&nbsp📑 <a href="https://arxiv.org/abs/2503.20752">ArXiv</a>&nbsp&nbsp | &nbsp&nbsp💬 <a href="./assets/wechat.png">WeChat</a>
 </p>
 
 <p align="center">
@@ -31,6 +31,7 @@ Experimental results demonstrate Reasoning-RFT's three key advantages: **(1) Per
 ## <a id="RoadMap"> 🎯 RoadMap</a>
 
 - **`Support different VLMs`**: [RoboBrain](https://github.com/FlagOpen/RoboBrain/), [Qwen2-VL series](https://github.com/QwenLM/Qwen2.5-VL/), [Llava-VL series](https://github.com/LLaVA-VL/LLaVA-NeXT).
+    - Explore an efficient training paradigm to enhance [RoboBrain](https://github.com/FlagOpen/RoboBrain/)'s embodied reasoning capabilities.
 - **`Support General Visual Reasoning Tasks`**: 
     - Data generation and preparation: Please refer to [General Visual Reasoning Tasks](#GeneralVisualTasks).
     - Training and evaluating for **Visual Counting**: Please refer to [Visual Counting Section](#Visual_Counting).
