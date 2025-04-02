@@ -193,6 +193,10 @@ bash scripts/eval/open_source_models/calculate_score/calculate_score.sh
 ```
 **Note:** Please change the checkpoint path in the scripts above.
 
+<div align="center">
+<img src="./assets/result.png" />
+</div>
+
 ## <a id="EmbodiedVisualReasoningTasks"> 🤖 Embodied Visual Reasoning Tasks</a>
 ***Please Stay Tuned ...***
 
