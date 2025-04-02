@@ -75,21 +75,26 @@ pip install -r requirements.txt
 ```
 
 ### <a id="Preparation"> ♣️ Dataset Preparation</a>
-***The training dataset and evaluation benchmarks will be available in the coming days (Uploading...)***
+**The training dataset and evaluation benchmarks will be available in the coming days (Uploading Now🤗)**
 
 ### <a id="Training"> 📚 Training</a>
 
 ```bash
 # ANS-SFT, Task1 (Visual-Counting), Qwen2-vl-2b
 bash scripts/train/ans_sft/resume_finetune_qwen2vl_2b_task1_ans_sft.sh
+
 # ANS-SFT, Task1 (Visual-Counting), Qwen2-vl-7b
 bash scripts/train/ans_sft/resume_finetune_qwen2vl_7b_task1_ans_sft.sh
+
 # ANS-SFT, Task2 (Structure-Perception), Qwen2-vl-2b
 bash scripts/train/ans_sft/resume_finetune_qwen2vl_2b_task2_ans_sft.sh
+
 # ANS-SFT, Task2 (Structure-Perception), Qwen2-vl-7b
 bash scripts/train/ans_sft/resume_finetune_qwen2vl_7b_task2_ans_sft.sh
+
 # ANS-SFT, Task3 (Spatial-Transformation), Qwen2-vl-2b
 bash scripts/train/ans_sft/resume_finetune_qwen2vl_2b_task3_ans_sft.sh
+
 # ANS-SFT, Task3 (Spatial-Transformation), Qwen2-vl-7b
 bash scripts/train/ans_sft/resume_finetune_qwen2vl_7b_task3_ans_sft.sh
 ```
@@ -97,14 +102,19 @@ bash scripts/train/ans_sft/resume_finetune_qwen2vl_7b_task3_ans_sft.sh
 ```bash
 # COT-SFT, Task1 (Visual-Counting), Qwen2-vl-2b
 bash scripts/train/cot_sft/resume_finetune_qwen2vl_2b_task1_cot_sft.sh
+
 # COT-SFT, Task1 (Visual-Counting), Qwen2-vl-7b
 bash scripts/train/cot_sft/resume_finetune_qwen2vl_7b_task1_cot_sft.sh
+
 # COT-SFT, Task2 (Structure-Perception), Qwen2-vl-2b
 bash scripts/train/cot_sft/resume_finetune_qwen2vl_2b_task2_cot_sft.sh
+
 # COT-SFT, Task2 (Structure-Perception), Qwen2-vl-7b
 bash scripts/train/cot_sft/resume_finetune_qwen2vl_7b_task2_cot_sft.sh
+
 # COT-SFT, Task3 (Spatial-Transformation), Qwen2-vl-2b
 bash scripts/train/cot_sft/resume_finetune_qwen2vl_2b_task3_cot_sft.sh
+
 # COT-SFT, Task3 (Spatial-Transformation), Qwen2-vl-7b
 bash scripts/train/cot_sft/resume_finetune_qwen2vl_7b_task3_cot_sft.sh
 ```
@@ -112,14 +122,19 @@ bash scripts/train/cot_sft/resume_finetune_qwen2vl_7b_task3_cot_sft.sh
 ```bash
 # Reason-RFT-Zero, Task1 (Visual-Counting), Qwen2-vl-2b
 bash scripts/train/reason_rft_zero/resume_finetune_qwen2vl_2b_task1_only_rl.sh
+
 # Reason-RFT-Zero, Task1 (Visual-Counting), Qwen2-vl-7b
 bash scripts/train/reason_rft_zero/resume_finetune_qwen2vl_7b_task1_only_rl.sh
+
 # Reason-RFT-Zero, Task2 (Structure-Perception), Qwen2-vl-2b
 bash scripts/train/reason_rft_zero/resume_finetune_qwen2vl_2b_task2_only_rl.sh
+
 # Reason-RFT-Zero, Task2 (Structure-Perception), Qwen2-vl-7b
 bash scripts/train/reason_rft_zero/resume_finetune_qwen2vl_7b_task2_only_rl.sh
+
 # Reason-RFT-Zero, Task3 (Spatial-Transformation), Qwen2-vl-2b
 bash scripts/train/reason_rft_zero/resume_finetune_qwen2vl_2b_task3_only_rl.sh
+
 # Reason-RFT-Zero, Task3 (Spatial-Transformation), Qwen2-vl-7b
 bash scripts/train/reason_rft_zero/resume_finetune_qwen2vl_7b_task3_only_rl.sh
 ```
@@ -128,23 +143,28 @@ bash scripts/train/reason_rft_zero/resume_finetune_qwen2vl_7b_task3_only_rl.sh
 # Reason-RFT, Task1 (Visual-Counting), Qwen2-vl-2b, STAGE1 + STAGE2
 bash scripts/train/reason_rft/stage_sft/resume_finetune_qwen2vl_2b_task1_stage1_sft.sh
 bash scripts/train/reason_rft/stage_rl/resume_finetune_qwen2vl_2b_task1_stage2_rl.sh
+
 # Reason-RFT, Task1 (Visual-Counting), Qwen2-vl-7b, STAGE1 + STAGE2
 bash scripts/train/reason_rft/stage_sft/resume_finetune_qwen2vl_7b_task1_stage1_sft.sh
 bash scripts/train/reason_rft/stage_rl/resume_finetune_qwen2vl_7b_task1_stage2_rl.sh
+
 # Reason-RFT, Task2 (Structure-Perception), Qwen2-vl-2b, STAGE1 + STAGE2
 bash scripts/train/reason_rft/stage_sft/resume_finetune_qwen2vl_2b_task2_stage1_sft.sh
 bash scripts/train/reason_rft/stage_rl/resume_finetune_qwen2vl_2b_task2_stage2_rl.sh
+
 # Reason-RFT, Task2 (Structure-Perception), Qwen2-vl-7b, STAGE1 + STAGE2
 bash scripts/train/reason_rft/stage_sft/resume_finetune_qwen2vl_7b_task2_stage1_sft.sh
 bash scripts/train/reason_rft/stage_rl/resume_finetune_qwen2vl_7b_task2_stage2_rl.sh
+
 # Reason-RFT, Task3 (Spatial-Transformation), Qwen2-vl-2b, STAGE1 + STAGE2
 bash scripts/train/reason_rft/stage_sft/resume_finetune_qwen2vl_2b_task3_stage1_sft.sh
 bash scripts/train/reason_rft/stage_rl/resume_finetune_qwen2vl_2b_task3_stage2_rl.sh
+
 # Reason-RFT, Task3 (Spatial-Transformation), Qwen2-vl-7b, STAGE1 + STAGE2
 bash scripts/train/reason_rft/stage_sft/resume_finetune_qwen2vl_7b_task3_stage1_sft.sh
 bash scripts/train/reason_rft/stage_rl/resume_finetune_qwen2vl_7b_task3_stage2_rl.sh
 ```
-***Note: Please change the dataset, pre-trained model and image path in the scripts above.***
+**Note:** Please change the dataset, pre-trained model and image path in the scripts above.
 
 ## <a id="Evaluation"> 🔭 Evaluation</a>
 ```bash
@@ -171,7 +191,7 @@ bash scripts/eval/open_source_models/multi_gpu_eval/eval_by_vllm_all_tasks_reaso
 # Get scores for ours or Open-Source Models
 bash scripts/eval/open_source_models/calculate_score/calculate_score.sh
 ```
-***Note: Please change the checkpoint path in the scripts above.***
+**Note:** Please change the checkpoint path in the scripts above.
 
 ## <a id="EmbodiedVisualReasoningTasks"> 🤖 Embodied Visual Reasoning Tasks</a>
 ***Please Stay Tuned ...***
