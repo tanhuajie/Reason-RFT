@@ -5,7 +5,7 @@
 # Reason-RFT: Reinforcement Fine-Tuning for Visual Reasoning.
 
 <p align="center">
-        </a>&nbsp&nbsp⭐️ <a href="https://tanhuajie.github.io/ReasonRFT/">Project</a></a>&nbsp&nbsp | &nbsp&nbsp🤗 <a href="">Hugging Face</a>&nbsp&nbsp | &nbsp&nbsp🌎 <a href="">Dataset</a>&nbsp&nbsp | &nbsp&nbsp📑 <a href="https://arxiv.org/abs/2503.20752">ArXiv</a>&nbsp&nbsp | &nbsp&nbsp💬 <a href="./assets/wechat.png">WeChat</a>
+    </a>&nbsp&nbsp⭐️ <a href="https://tanhuajie.github.io/ReasonRFT/">Project</a></a>&nbsp&nbsp | &nbsp&nbsp🌎 <a href="https://huggingface.co/datasets/tanhuajie2001/Reason-RFT-CoT-Dataset/tree/main/">Dataset</a>&nbsp&nbsp | &nbsp&nbsp🤗 <a href="">Models (Coming Soon)</a>&nbsp&nbsp | &nbsp&nbsp📑 <a href="https://arxiv.org/abs/2503.20752">ArXiv</a>&nbsp&nbsp | &nbsp&nbsp💬 <a href="./assets/wechat.png">WeChat</a>
 </p>
 
 <p align="center">
@@ -33,7 +33,7 @@ Experimental results demonstrate Reasoning-RFT's three key advantages: **(1) Per
 - **`Support different VLMs`**: [RoboBrain](https://github.com/FlagOpen/RoboBrain/), [Qwen2-VL series](https://github.com/QwenLM/Qwen2.5-VL/), [Llava-VL series](https://github.com/LLaVA-VL/LLaVA-NeXT).
     - Explore an efficient training paradigm to enhance [RoboBrain](https://github.com/FlagOpen/RoboBrain/)'s embodied reasoning capabilities.
 - **`Support General Visual Reasoning Tasks`**: 
-    - Data generation and preparation: Please refer to [General Visual Reasoning Tasks](#GeneralVisualTasks).
+    - Data download and preparation: Please refer to [General Visual Reasoning Tasks](#Preparation).
     - Training and evaluating for **Visual Counting**: Please refer to [Visual Counting Section](#GeneralVisualTasks).
     - Training and evaluating for **Struction Perception**: Please refer to [Struction Perception Section](#GeneralVisualTasks).
     - Training and evaluating for **Spatial Transformation**: Please refer to [Spatial Transformation Section](#GeneralVisualTasks).
@@ -47,6 +47,7 @@ Experimental results demonstrate Reasoning-RFT's three key advantages: **(1) Per
 
 ## 🗞️ News
 
+- **`2025-04-04`**: 🤗 We released our [datasets](https://huggingface.co/datasets/tanhuajie2001/Reason-RFT-CoT-Dataset/) to huggingface for [General Visual Reasoning Tasks](#GeneralVisualTasks).
 - **`2025-04-02`**: 🔥 We released codes and scripts for training/evaluation on [General Visual Reasoning Tasks](#GeneralVisualTasks).
 - **`2025-03-29`**: 🌍 We released the [repository](https://github.com/tanhuajie/Reason-RFT/) and [roadmap](#RoadMap) for **Reason-RFT**.
 - **`2025-03-26`**: 📑 We released our initial [ArXiv paper](https://arxiv.org/abs/2503.20752/) of **Reason-RFT**.
@@ -75,7 +76,135 @@ pip install -r requirements.txt
 ```
 
 ### <a id="Preparation"> ♣️ Dataset Preparation</a>
-**The training dataset and evaluation benchmarks will be available in the coming days (Uploading Now🤗)**
+**The training dataset and evaluation benchmarks is available now in Huggingface 🤗.**
+
+#### Step 1: Download Dataset
+```bash
+# Download from tanhuajie2001/Reason-RFT-CoT-Dataset
+huggingface-cli download --repo-type dataset --resume-download tanhuajie2001/Reason-RFT-CoT-Dataset --local-dir ./Reason-RFT-CoT-Dataset
+
+# unzip images
+cd Reason-RFT-CoT-Dataset
+unzip train_images.zip
+unzip test_images.zip
+```
+Then, your local dirctory should be like:
+```bash
+Reason-RFT-CoT-Dataset/
+|   # Images for training & evaluation
+├── images/
+|   ├── train_images/
+|   |   ├── ...
+|   └── test_images/
+|       ├── ...
+|   # CoT datasets for training
+├── train_jsons/
+|   |   # Full training datasets for Spatial-Transformation task
+|   ├── A1-Spatial-Transformation-train-60k-cot.json
+|   |   # Full training datasets for Structure-Perception task
+|   ├── A2-Structure-Perception-train-4k5-cot.json
+|   |   # Full training datasets for Visual-Counting task
+|   ├── A3-Visual-Counting-train-35k-cot.json
+|   |   # Scientific visual reasoning (Optional)
+|   ├── AI2D-train-1467-cot.json
+|   ├── ScienceQA-train-2112-cot.json
+|   |   # Topological visual reasoning (Optional)
+|   ├── GVLQA-connectivity-train-1199-cot.json
+|   ├── GVLQA-cycle-train-1194-cot.json
+|   ├── GVLQA-hamilton-train-1158-cot.json
+|   ├── GVLQA-topology-train-1070-cot.json
+|   ├── GVLQA-matching-train-1193-cot.json
+|   |   # Pattern & Puzzle visual reasoning (Optional)
+|   ├── PuzzleVQA-train-1618-cot.json
+|   ├── IconQA-train-5270-cot.json
+|   ├── Raven-train-982-cot.json
+|   |   # Geometric visual reasoning (Optional)
+|   ├── GeoQA-train-1500-cot.json
+|   ├── GeomVerse-train-2841-cot.json
+|   └── Geometry3K-train-3794-cot.json
+|   # Datasets for evaluation
+├── test_jsons/
+|   |   # Evaluation for Spatial-Transformation task
+|   ├── Spatial-Transformation-id-test-1k.json # In-Domain
+|   ├── Spatial-Transformation-ood-left-test-1k.json # Out-of-Domain
+|   ├── Spatial-Transformation-ood-right-test-1k.json # Out-of-Domain
+|   |   # Evaluation for Structure-Perception task
+|   ├── Structure-Perception-id-test-820.json # In-Domain
+|   ├── Structure-Perception-ood-test-800.json # Out-of-Domain
+|   |   # Evaluation for Visual-Counting task
+|   ├── Visual-Counting-id-test-1k.json # In-Domain
+|   └── Visual-Counting-ood-test-1k.json # Out-of-Domain
+└── README.md
+```
+#### Step 2: Construct Dataset for ANS-SFT, COT-SFT, Reason-RFT(-Zero)
+
+📑 For SFT-based training, we use ShareGPT format to refactor each sample. For example:
+```json
+// ANS-SFT
+{
+    "id": "train-418840",
+    "image": [
+        "img_418840-init.C.png",
+        "img_418840-fin.C.png"
+    ],
+    "messages": [
+        {
+            "content": "{Prompt} + {Problem}",
+            "role": "user"
+        },
+        {
+            "content": "{Answer}",
+            "role": "assistant"
+        }
+    ]
+},
+
+// COT-SFT
+{
+    "id": "train-418840",
+    "image": [
+        "img_418840-init.C.png",
+        "img_418840-fin.C.png"
+    ],
+    "messages": [
+        {
+            "content": f"{Prompt}\n{Problem}",
+            "role": "user"
+        },
+        {
+            "content": f"<think>\n{COT}\n</think>\n<answer>\n{Answer}\n</answer>",
+            "role": "assistant"
+        }
+    ]
+},
+```
+
+📑 For RL-based training, we use below format to refactor each sample. For example:
+
+```json
+{
+    "id": "train-418840",
+    "image": [
+        "img_418840-init.C.png",
+        "img_418840-fin.C.png"
+    ],
+    "problem": f"{Problem}",
+    "solution": f"{Answer}"
+},
+```
+
+#### Step 3: Change Path to Your Own Constructed Datasets
+```bash
+# SFT Training: 
+dataset paths in ./train/stage_sft/dataset_info.json
+
+# RL Training: 
+dataset paths in ./scripts/train/reason_rft/stage_rl/xxx.bash
+dataset paths in ./scripts/train/reason_rft_zero/xxx.bash
+
+# Evaluation: 
+dataset paths in ./eval/eval_by_vllm_for_open_source.py
+```
 
 ### <a id="Training"> 📚 Training</a>
 
