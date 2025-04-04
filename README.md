@@ -76,7 +76,6 @@ pip install -r requirements.txt
 ```
 
 ### <a id="Preparation"> ♣️ Dataset Preparation</a>
-**The training dataset and evaluation benchmarks is available now in Huggingface 🤗.**
 
 #### Step 1: Download Dataset
 ```bash
@@ -88,59 +87,62 @@ cd Reason-RFT-CoT-Dataset
 unzip train_images.zip
 unzip test_images.zip
 ```
+
 Then, your local dirctory should be like:
-```bash
+
+```diff
 Reason-RFT-CoT-Dataset/
-|   # Images for training & evaluation
+|   <span style="color: #90EE90"># Images for training & evaluation</span>
 ├── images/
 |   ├── train_images/
 |   |   ├── ...
 |   └── test_images/
 |       ├── ...
-|   # CoT datasets for training
+|   <span style="color: #90EE90"># CoT datasets for training</span>
 ├── train_jsons/
-|   |   # Full training datasets for Spatial-Transformation task
+|   |   <span style="color: #90EE90"># Full training datasets for Spatial-Transformation task</span>
 |   ├── A1-Spatial-Transformation-train-60k-cot.json
-|   |   # Full training datasets for Structure-Perception task
+|   |   <span style="color: #90EE90"># Full training datasets for Structure-Perception task</span>
 |   ├── A2-Structure-Perception-train-4k5-cot.json
-|   |   # Full training datasets for Visual-Counting task
+|   |   <span style="color: #90EE90"># Full training datasets for Visual-Counting task</span>
 |   ├── A3-Visual-Counting-train-35k-cot.json
-|   |   # Scientific visual reasoning (Optional)
+|   |   <span style="color: #90EE90"># Scientific visual reasoning (Optional)</span>
 |   ├── AI2D-train-1467-cot.json
 |   ├── ScienceQA-train-2112-cot.json
-|   |   # Topological visual reasoning (Optional)
+|   |   <span style="color: #90EE90"># Topological visual reasoning (Optional)</span>
 |   ├── GVLQA-connectivity-train-1199-cot.json
 |   ├── GVLQA-cycle-train-1194-cot.json
 |   ├── GVLQA-hamilton-train-1158-cot.json
 |   ├── GVLQA-topology-train-1070-cot.json
 |   ├── GVLQA-matching-train-1193-cot.json
-|   |   # Pattern & Puzzle visual reasoning (Optional)
+|   |   <span style="color: #90EE90"># Pattern & Puzzle visual reasoning (Optional)</span>
 |   ├── PuzzleVQA-train-1618-cot.json
 |   ├── IconQA-train-5270-cot.json
 |   ├── Raven-train-982-cot.json
-|   |   # Geometric visual reasoning (Optional)
+|   |   <span style="color: #90EE90"># Geometric visual reasoning (Optional)</span>
 |   ├── GeoQA-train-1500-cot.json
 |   ├── GeomVerse-train-2841-cot.json
 |   └── Geometry3K-train-3794-cot.json
-|   # Datasets for evaluation
+|   <span style="color: #90EE90"># Datasets for evaluation</span>
 ├── test_jsons/
-|   |   # Evaluation for Spatial-Transformation task
+|   |   <span style="color: #90EE90"># Evaluation for Spatial-Transformation task</span>
 |   ├── Spatial-Transformation-id-test-1k.json # In-Domain
 |   ├── Spatial-Transformation-ood-left-test-1k.json # Out-of-Domain
 |   ├── Spatial-Transformation-ood-right-test-1k.json # Out-of-Domain
-|   |   # Evaluation for Structure-Perception task
+|   |   <span style="color: #90EE90"># Evaluation for Structure-Perception task</span>
 |   ├── Structure-Perception-id-test-820.json # In-Domain
 |   ├── Structure-Perception-ood-test-800.json # Out-of-Domain
-|   |   # Evaluation for Visual-Counting task
+|   |   <span style="color: #90EE90"># Evaluation for Visual-Counting task</span>
 |   ├── Visual-Counting-id-test-1k.json # In-Domain
 |   └── Visual-Counting-ood-test-1k.json # Out-of-Domain
 └── README.md
 ```
+
 #### Step 2: Construct Dataset for ANS-SFT, COT-SFT, Reason-RFT(-Zero)
 
 📑 For SFT-based training, we use ShareGPT format to refactor each sample. For example:
 ```json
-// ANS-SFT
+# ANS-SFT
 {
     "id": "train-418840",
     "image": [
@@ -149,7 +151,7 @@ Reason-RFT-CoT-Dataset/
     ],
     "messages": [
         {
-            "content": "{Prompt} + {Problem}",
+            "content": "{Prompt}\n{Problem}",
             "role": "user"
         },
         {
@@ -159,7 +161,7 @@ Reason-RFT-CoT-Dataset/
     ]
 },
 
-// COT-SFT
+# COT-SFT
 {
     "id": "train-418840",
     "image": [
@@ -168,11 +170,11 @@ Reason-RFT-CoT-Dataset/
     ],
     "messages": [
         {
-            "content": f"{Prompt}\n{Problem}",
+            "content": "{Prompt}\n{Problem}",
             "role": "user"
         },
         {
-            "content": f"<think>\n{COT}\n</think>\n<answer>\n{Answer}\n</answer>",
+            "content": "<think>\n{COT}\n</think>\n<answer>\n{Answer}\n</answer>",
             "role": "assistant"
         }
     ]
@@ -188,22 +190,22 @@ Reason-RFT-CoT-Dataset/
         "img_418840-init.C.png",
         "img_418840-fin.C.png"
     ],
-    "problem": f"{Problem}",
-    "solution": f"{Answer}"
+    "problem": "{Problem}",
+    "solution": "{Answer}"
 },
 ```
 
 #### Step 3: Change Path to Your Own Constructed Datasets
 ```bash
 # SFT Training: 
-dataset paths in ./train/stage_sft/dataset_info.json
+change dataset paths defined in './train/stage_sft/dataset_info.json' file.
 
 # RL Training: 
-dataset paths in ./scripts/train/reason_rft/stage_rl/xxx.bash
-dataset paths in ./scripts/train/reason_rft_zero/xxx.bash
+change dataset paths defined in './scripts/train/reason_rft/stage_rl/xxx.bash' file.
+change dataset paths defined in './scripts/train/reason_rft_zero/xxx.bash' file.
 
 # Evaluation: 
-dataset paths in ./eval/eval_by_vllm_for_open_source.py
+change dataset paths defined in './eval/eval_by_vllm_for_open_source.py' file.
 ```
 
 ### <a id="Training"> 📚 Training</a>
