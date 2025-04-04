@@ -1,11 +1,12 @@
 <div align="center">
-<img src="./assets/logo.png" width="400"/>
+<img src="./assets/logo.png" width="500"/>
 </div>
 
-# Reason-RFT: Reinforcement Fine-Tuning for Visual Reasoning.
+# Reason-RFT
+**Reason-RFT: Reinforcement Fine-Tuning for Visual Reasoning.**
 
 <p align="center">
-    </a>&nbsp&nbsp⭐️ <a href="https://tanhuajie.github.io/ReasonRFT/">Project</a></a>&nbsp&nbsp | &nbsp&nbsp🌎 <a href="https://huggingface.co/datasets/tanhuajie2001/Reason-RFT-CoT-Dataset/tree/main/">Dataset</a>&nbsp&nbsp | &nbsp&nbsp🤗 <a href="">Models (Coming Soon)</a>&nbsp&nbsp | &nbsp&nbsp📑 <a href="https://arxiv.org/abs/2503.20752">ArXiv</a>&nbsp&nbsp | &nbsp&nbsp💬 <a href="./assets/wechat.png">WeChat</a>
+    </a>&nbsp&nbsp⭐️ <a href="https://tanhuajie.github.io/ReasonRFT/">Project</a></a>&nbsp&nbsp │ &nbsp&nbsp🌎 <a href="https://huggingface.co/datasets/tanhuajie2001/Reason-RFT-CoT-Dataset/tree/main/">Dataset</a>&nbsp&nbsp │ &nbsp&nbsp🤗 <a href="">Models (Coming Soon)</a>&nbsp&nbsp │ &nbsp&nbsp📑 <a href="https://arxiv.org/abs/2503.20752">ArXiv</a>&nbsp&nbsp │ &nbsp&nbsp💬 <a href="./assets/wechat.png">WeChat</a>
 </p>
 
 <p align="center">
@@ -88,61 +89,61 @@ unzip train_images.zip
 unzip test_images.zip
 ```
 
-Then, your local dirctory should be like:
+Then, your local directory should be like:
 
-```diff
+```bash
 Reason-RFT-CoT-Dataset/
-|   <span style="color: #90EE90"># Images for training & evaluation</span>
+│   # Images for training & evaluation
 ├── images/
-|   ├── train_images/
-|   |   ├── ...
-|   └── test_images/
-|       ├── ...
-|   <span style="color: #90EE90"># CoT datasets for training</span>
+│   ├── train_images/
+│   │   ├── ...
+│   └── test_images/
+│       ├── ...
+│   # CoT datasets for training
 ├── train_jsons/
-|   |   <span style="color: #90EE90"># Full training datasets for Spatial-Transformation task</span>
-|   ├── A1-Spatial-Transformation-train-60k-cot.json
-|   |   <span style="color: #90EE90"># Full training datasets for Structure-Perception task</span>
-|   ├── A2-Structure-Perception-train-4k5-cot.json
-|   |   <span style="color: #90EE90"># Full training datasets for Visual-Counting task</span>
-|   ├── A3-Visual-Counting-train-35k-cot.json
-|   |   <span style="color: #90EE90"># Scientific visual reasoning (Optional)</span>
-|   ├── AI2D-train-1467-cot.json
-|   ├── ScienceQA-train-2112-cot.json
-|   |   <span style="color: #90EE90"># Topological visual reasoning (Optional)</span>
-|   ├── GVLQA-connectivity-train-1199-cot.json
-|   ├── GVLQA-cycle-train-1194-cot.json
-|   ├── GVLQA-hamilton-train-1158-cot.json
-|   ├── GVLQA-topology-train-1070-cot.json
-|   ├── GVLQA-matching-train-1193-cot.json
-|   |   <span style="color: #90EE90"># Pattern & Puzzle visual reasoning (Optional)</span>
-|   ├── PuzzleVQA-train-1618-cot.json
-|   ├── IconQA-train-5270-cot.json
-|   ├── Raven-train-982-cot.json
-|   |   <span style="color: #90EE90"># Geometric visual reasoning (Optional)</span>
-|   ├── GeoQA-train-1500-cot.json
-|   ├── GeomVerse-train-2841-cot.json
-|   └── Geometry3K-train-3794-cot.json
-|   <span style="color: #90EE90"># Datasets for evaluation</span>
+│   │   # Full datasets for Spatial-Transformation task
+│   ├── A1-Spatial-Transformation-train-60k-cot.json
+│   │   # Full datasets for Structure-Perception task
+│   ├── A2-Structure-Perception-train-4k5-cot.json
+│   │   # Full datasets for Visual-Counting task
+│   ├── A3-Visual-Counting-train-35k-cot.json
+│   │   # Scientific visual reasoning (Optional)
+│   ├── AI2D-train-1467-cot.json
+│   ├── ScienceQA-train-2112-cot.json
+│   │   # Topological visual reasoning (Optional)
+│   ├── GVLQA-connectivity-train-1199-cot.json
+│   ├── GVLQA-cycle-train-1194-cot.json
+│   ├── GVLQA-hamilton-train-1158-cot.json
+│   ├── GVLQA-topology-train-1070-cot.json
+│   ├── GVLQA-matching-train-1193-cot.json
+│   │   # Pattern & Puzzle visual reasoning (Optional)
+│   ├── PuzzleVQA-train-1618-cot.json
+│   ├── IconQA-train-5270-cot.json
+│   ├── Raven-train-982-cot.json
+│   │   # Geometric visual reasoning (Optional)
+│   ├── GeoQA-train-1500-cot.json
+│   ├── GeomVerse-train-2841-cot.json
+│   └── Geometry3K-train-3794-cot.json
+│   # Datasets for evaluation
 ├── test_jsons/
-|   |   <span style="color: #90EE90"># Evaluation for Spatial-Transformation task</span>
-|   ├── Spatial-Transformation-id-test-1k.json # In-Domain
-|   ├── Spatial-Transformation-ood-left-test-1k.json # Out-of-Domain
-|   ├── Spatial-Transformation-ood-right-test-1k.json # Out-of-Domain
-|   |   <span style="color: #90EE90"># Evaluation for Structure-Perception task</span>
-|   ├── Structure-Perception-id-test-820.json # In-Domain
-|   ├── Structure-Perception-ood-test-800.json # Out-of-Domain
-|   |   <span style="color: #90EE90"># Evaluation for Visual-Counting task</span>
-|   ├── Visual-Counting-id-test-1k.json # In-Domain
-|   └── Visual-Counting-ood-test-1k.json # Out-of-Domain
+│   │   # Evaluation for Spatial-Transformation task
+│   ├── Spatial-Transformation-id-test-1k.json # In-Domain
+│   ├── Spatial-Transformation-ood-left-test-1k.json # Out-of-Domain
+│   ├── Spatial-Transformation-ood-right-test-1k.json # Out-of-Domain
+│   │   # Evaluation for Structure-Perception task
+│   ├── Structure-Perception-id-test-820.json # In-Domain
+│   ├── Structure-Perception-ood-test-800.json # Out-of-Domain
+│   │   # Evaluation for Visual-Counting task
+│   ├── Visual-Counting-id-test-1k.json # In-Domain
+│   └── Visual-Counting-ood-test-1k.json # Out-of-Domain
 └── README.md
 ```
 
 #### Step 2: Construct Dataset for ANS-SFT, COT-SFT, Reason-RFT(-Zero)
 
-📑 For SFT-based training, we use ShareGPT format to refactor each sample. For example:
+📑 For ANS-SFT training, we use ShareGPT format to refactor each sample:
+
 ```json
-# ANS-SFT
 {
     "id": "train-418840",
     "image": [
@@ -160,8 +161,11 @@ Reason-RFT-CoT-Dataset/
         }
     ]
 },
+```
 
-# COT-SFT
+📑 For COT-SFT training, we also use ShareGPT format to refactor each sample:
+
+```json
 {
     "id": "train-418840",
     "image": [
@@ -181,7 +185,7 @@ Reason-RFT-CoT-Dataset/
 },
 ```
 
-📑 For RL-based training, we use below format to refactor each sample. For example:
+📑 For RL-based training, we use format below to refactor each sample:
 
 ```json
 {
