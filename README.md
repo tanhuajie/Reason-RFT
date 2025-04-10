@@ -141,9 +141,7 @@ Reason-RFT-CoT-Dataset/
 
 #### Step 2: Construct Dataset for ANS-SFT, COT-SFT, Reason-RFT(-Zero)
 
-**Note:** If you want to implement training process for our three main tasks, only three Meta-Json files -- **'A1-Spatial-Transformation-train-60k-cot.json', 'A2-Structure-Perception-train-4k5-cot.json' and 'A3-Visual-Counting-train-35k-cot.json'** -- are needed respectively. Then, all the training-used json files can be constructed by these three Meta-Json files above. 
-
-At this step, you should write the simple scripts to complete the construction for your own training-used json files directly, according to the sample format as shown below.
+*Note:* If you want to implement training process for our three main tasks, only three Meta-Json files -- **'A1-Spatial-Transformation-train-60k-cot.json', 'A2-Structure-Perception-train-4k5-cot.json' and 'A3-Visual-Counting-train-35k-cot.json'** -- are needed respectively. Then, all the training-used json files can be constructed by these three Meta-Json files above. At this step, you should write the simple scripts to complete the construction for **your own training-used json files** directly, according to the sample format as shown below.
 
 **📑 1. For *ANS-SFT* training, we use ShareGPT format to refactor each sample:**
 
