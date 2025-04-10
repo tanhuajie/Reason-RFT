@@ -141,9 +141,11 @@ Reason-RFT-CoT-Dataset/
 
 #### Step 2: Construct Dataset for ANS-SFT, COT-SFT, Reason-RFT(-Zero)
 
-*If you want to implement training process for our three main tasks, only 'A1-Spatial-Transformation-train-60k-cot.json', 'A2-Structure-Perception-train-4k5-cot.json' and 'A3-Visual-Counting-train-35k-cot.json' are needed respectively. Then, all the training-used json files can be constructed by these three Meta-Json files above. At this step, you should write the simple scripts to complete the construction for your own training-used json files, according to the sample format as shown below.*
+**Note:** If you want to implement training process for our three main tasks, only three Meta-Json files -- **'A1-Spatial-Transformation-train-60k-cot.json', 'A2-Structure-Perception-train-4k5-cot.json' and 'A3-Visual-Counting-train-35k-cot.json'** -- are needed respectively. Then, all the training-used json files can be constructed by these three Meta-Json files above. 
 
-📑 1. For **ANS-SFT** training, we use ShareGPT format to refactor each sample:
+At this step, you should write the simple scripts to complete the construction for your own training-used json files directly, according to the sample format as shown below.
+
+**📑 1. For *ANS-SFT* training, we use ShareGPT format to refactor each sample:**
 
 ```json
 {
@@ -161,10 +163,11 @@ Reason-RFT-CoT-Dataset/
     ]
 },
 ```
-**Tips:** *Prompt_xxx_ANS_SFT* can be found in *./utils/prompts.py*, and *{id}*, *{image}*, *{problem}*, *{answer}* are from *Meta-Json files*
+```
+Tips: {Prompt_xxx_ANS_SFT} can be found in ./utils/prompts.py, while {id}, {image}, {problem} and {answer} are from Meta-Json files.
+```
 
-
-📑 2. For **COT-SFT** training, we also use ShareGPT format to refactor each sample:
+**📑 2. For *COT-SFT* training, we also use ShareGPT format to refactor each sample:**
 
 ```json
 {
@@ -182,10 +185,11 @@ Reason-RFT-CoT-Dataset/
     ]
 },
 ```
-**Tips:** *Prompt_xxx_COT_SFT* can be found in *./utils/prompts.py*, and *{id}*, *{image}*, *{problem}*, {cot}, *{answer}* are from *Meta-Json files*
+```
+Tips: {Prompt_xxx_COT_SFT} can be found in ./utils/prompts.py, while {id}, {image}, {problem}, {cot} and {answer} are from Meta-Json files.
+```
 
-
-📑 3. For **Reason-RFT-Zero** training, we use RL format below to refactor each sample:
+**📑 3. For *Reason-RFT-Zero* training, we use RL format below to refactor each sample:**
 
 ```json
 {
@@ -195,9 +199,13 @@ Reason-RFT-CoT-Dataset/
     "solution": "{answer}"
 },
 ```
-**Tips:** *Prompt_xxx_COT_SFT* can be found in *./utils/prompts.py*, and *{id}*, *{image}*, *{problem}*, *{answer}* are from *Meta-Json files*
+```
+Tips: {Prompt_xxx_COT_SFT} can be found in ./utils/prompts.py, while {id}, {image}, {problem} and {answer} are from Meta-Json files.
+```
 
-📑 4. For **Reason-RFT training**, we use COT-SFT format to refactor 1.6k samples for STAGE-1, and use RL format to refactor the rest samples or full samples for STAGE-2. Specifically, in STAGE 2, we refactor full samples for Structure-Perception task due to too limited training samples, while we refactor only the rest samples for Spatial-Transformation task and Visual-Counting task.
+**📑 4. For *Reason-RFT* training, we use COT-SFT format to refactor 1.6k samples for STAGE-1, and use RL format to refactor the rest samples or full samples for STAGE-2.**
+
+ *Specifically, in STAGE 2, we refactor full samples for Structure-Perception task due to its too limited training samples (only 4.5k), while we refactor only the rest samples for Spatial-Transformation task and Visual-Counting task.*
 
 
 #### Step 3: Change Path to Your Own Constructed Datasets
