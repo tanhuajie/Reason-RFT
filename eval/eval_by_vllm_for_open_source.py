@@ -58,7 +58,7 @@ Now, it's your turn!
 
 COT_CLEVR_MATH_QUESTION_PROMPT = "{Question} Output the thinking process in <think> </think> and final answer (number) in <answer> </answer> tags."
 
-COT_GEOMATH_QUESTION_PROMPT = "{Question}"
+COT_GEOMATH_QUESTION_PROMPT = "{Question}  Output the thinking process in <think> </think> and final answer (number or choice) in <answer> </answer> tags."
 
 COT_GEOMETRY_QUESTION_PROMPT = "{Question} Output the thinking process in <think> </think> and final answer (number or choice) in <answer> </answer> tags."
 
