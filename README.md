@@ -328,9 +328,22 @@ bash scripts/eval/open_source_models/calculate_score/calculate_score.sh
 ```
 **Note:** Please change the checkpoint path in the scripts above.
 
+### <a id="OurResults"> ⭐️ Results in our paper</a>
+
+*1. Results of Spatial Transformation Task:*
+
+<div align="center">
+<img src="./assets/res_task3.png" />
+</div>
+
+
+*2. Full Results of Three Tasks:*
+
 <div align="center">
 <img src="./assets/result.png" />
 </div>
+
+*Note: For more detail results, please refer to our [main paper and appendix](https://arxiv.org/abs/2503.20752)*
 
 ## <a id="EmbodiedVisualReasoningTasks"> 🤖 Embodied Visual Reasoning Tasks</a>
 ***Please Stay Tuned ...***
