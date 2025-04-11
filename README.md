@@ -193,12 +193,12 @@ Tips: {Prompt_xxx_COT_SFT} can be found in ./utils/prompts.py, while {id}, {imag
 {
     "id": "{id}",
     "image": "{image}",
-    "problem": "{PROMPT_xxx_COT_SFT} + {problem}",
+    "problem": "{problem}",
     "solution": "{answer}"
 },
 ```
 ```
-Tips: {Prompt_xxx_COT_SFT} can be found in ./utils/prompts.py, while {id}, {image}, {problem} and {answer} are from Meta-Json files.
+Tips: {id}, {image}, {problem} and {answer} are from Meta-Json files.
 ```
 
 **📑 4. For *Reason-RFT* training, we use COT-SFT format to refactor 1.6k samples for STAGE-1, and use RL format to refactor the rest samples or full samples for STAGE-2.**

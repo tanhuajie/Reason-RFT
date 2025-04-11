@@ -260,4 +260,4 @@ Now, it's your turn!
 
 CLEVR_MATH_QUESTION_PROMPT = "{Question} Output the thinking process in <think> </think> and final answer (number) in <answer> </answer> tags."
 
-GEOQA_QUESTION_PROMPT = "{Question}"
+GEOQA_QUESTION_PROMPT = "{Question} Output the thinking process in <think> </think> and final answer (number or choice) in <answer> </answer> tags."

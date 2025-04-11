@@ -57,7 +57,7 @@ class GRPOScriptArguments(ScriptArguments):
     )
     task_name: str = field(
         default="trance", 
-        metadata={"help": "Task name: ['trance', trance-only-full', 'trance-full-caption', 'clevr-math', 'geoqa']"}
+        metadata={"help": "Task name: ['trance', trance-only-full', 'trance-full-caption', 'clevr-math', 'geomath']"}
     )
     image_path: Optional[str] = field(
         default="/home/vlm/train_images/", 
@@ -77,7 +77,7 @@ def main(script_args, training_args, model_args):
     use_system_prompt = False if script_args.use_system_prompt == "false" else True
     use_vllm_for_gen = False if script_args.use_vllm_for_gen == "false" else True
 
-    assert script_args.task_name in ['trance', 'trance-only-full', 'trance-full-caption', 'trance-penalty', 'clevr-math', 'geoqa'], f"Task ({script_args.task_name}) is not supported."
+    assert script_args.task_name in ['trance', 'trance-only-full', 'trance-full-caption', 'trance-penalty', 'clevr-math', 'geomath'], f"Task ({script_args.task_name}) is not supported."
 
     if script_args.task_name == "trance":
         SYSTEM_PROMPT = TRANCE_SYSTEM_PROMPT
@@ -124,7 +124,7 @@ def main(script_args, training_args, model_args):
             "reason": reasoning_steps_reward,
             "length": len_reward,
         }
-    elif script_args.task_name == "geoqa":
+    elif script_args.task_name == "geomath":
         SYSTEM_PROMPT = GEOQA_SYSTEM_PROMPT
         QUESTION_PROMPT = GEOQA_QUESTION_PROMPT
         reward_funcs_registry = {
