@@ -6,7 +6,7 @@
 **Reason-RFT: Reinforcement Fine-Tuning for Visual Reasoning.**
 
 <p align="center">
-    </a>&nbsp&nbsp⭐️ <a href="https://tanhuajie.github.io/ReasonRFT/">Project</a></a>&nbsp&nbsp │ &nbsp&nbsp🌎 <a href="https://huggingface.co/datasets/tanhuajie2001/Reason-RFT-CoT-Dataset/tree/main/">Dataset</a>&nbsp&nbsp │ &nbsp&nbsp🤗 <a href="">Models (Coming Soon)</a>&nbsp&nbsp │ &nbsp&nbsp📑 <a href="https://arxiv.org/abs/2503.20752">ArXiv</a>&nbsp&nbsp │ &nbsp&nbsp💬 <a href="./assets/wechat.png">WeChat</a>
+    </a>&nbsp&nbsp⭐️ <a href="https://tanhuajie.github.io/ReasonRFT/">Project</a></a>&nbsp&nbsp │ &nbsp&nbsp🌎 <a href="https://huggingface.co/datasets/tanhuajie2001/Reason-RFT-CoT-Dataset">Dataset</a>&nbsp&nbsp │ &nbsp&nbsp🤗 <a href="https://github.com/tanhuajie/Reason-RFT?tab=readme-ov-file#--model-zoo">Models</a>&nbsp&nbsp │ &nbsp&nbsp📑 <a href="https://arxiv.org/abs/2503.20752">ArXiv</a>&nbsp&nbsp │ &nbsp&nbsp💬 <a href="./assets/wechat.png">WeChat</a>
 </p>
 
 <p align="center">
@@ -48,6 +48,7 @@ Experimental results demonstrate Reasoning-RFT's three key advantages: **(1) Per
 
 ## 🗞️ News
 
+- **`2025-04-04`**: ✨ We released our [model zoo](https://github.com/tanhuajie/Reason-RFT?tab=readme-ov-file#--model-zoo) to huggingface.
 - **`2025-04-04`**: 🤗 We released our [datasets](https://huggingface.co/datasets/tanhuajie2001/Reason-RFT-CoT-Dataset/) to huggingface for [General Visual Reasoning Tasks](#GeneralVisualTasks).
 - **`2025-04-02`**: 🔥 We released codes and scripts for training/evaluation on [General Visual Reasoning Tasks](#GeneralVisualTasks).
 - **`2025-03-29`**: 🌍 We released the [repository](https://github.com/tanhuajie/Reason-RFT/) and [roadmap](#RoadMap) for **Reason-RFT**.
@@ -65,9 +66,9 @@ Experimental results demonstrate Reasoning-RFT's three key advantages: **(1) Per
 
 | Tasks                  | Reason-RFT-Zero-2B        | Reason-RFT-Zero-7B       | Reason-RFT-2B        | Reason-RFT-7B             |
 |------------------------|---------------------------|---------------------|---------------------------|---------------------------|
-| Visual Counting        | [🤗VC-Zero-Qwen2-VL-2B](https://huggingface.co/tanhuajie2001/Reason-RFT-Zero-Visual-Counting-Qwen2-VL-2B) | 🤗VC-Zero-Qwen2-VL-7B | [🤗VC-Qwen2-VL-2B](https://huggingface.co/tanhuajie2001/Reason-RFT-Visual-Counting-Qwen2-VL-2B) | 🤗VC-Qwen2-VL-7B |
-| Structure Perception   | [🤗SP-Zero-Qwen2-VL-2B](https://huggingface.co/tanhuajie2001/Reason-RFT-Zero-Structure-Perception-Qwen2-VL-2B) | 🤗SP-Zero-Qwen2-VL-7B | [🤗SP-Qwen2-VL-2B](https://huggingface.co/tanhuajie2001/Reason-RFT-Structure-Perception-Qwen2-VL-2B) | 🤗SP-Qwen2-VL-7B |
-| Spatial Transformation | [🤗ST-Zero-Qwen2-VL-2B](https://huggingface.co/tanhuajie2001/Reason-RFT-Zero-Spatial-Transformation-Qwen2-VL-2B) | 🤗ST-Zero-Qwen2-VL-7B | [🤗ST-Qwen2-VL-2B](https://huggingface.co/tanhuajie2001/Reason-RFT-Spatial-Transformation-Qwen2-VL-2B) | 🤗ST-Qwen2-VL-7B | 
+| Visual Counting        | [🤗VC-GRPO-Zero-2B](https://huggingface.co/tanhuajie2001/Reason-RFT-Zero-Visual-Counting-Qwen2-VL-2B) | 🤗VC-GRPO-Zero-7B | [🤗VC-GRPO-2B](https://huggingface.co/tanhuajie2001/Reason-RFT-Visual-Counting-Qwen2-VL-2B) | 🤗VC-GRPO-7B |
+| Structure Perception   | [🤗SP-GRPO-Zero-2B](https://huggingface.co/tanhuajie2001/Reason-RFT-Zero-Structure-Perception-Qwen2-VL-2B) | 🤗SP-GRPO-Zero-7B | [🤗SP-GRPO-2B](https://huggingface.co/tanhuajie2001/Reason-RFT-Structure-Perception-Qwen2-VL-2B) | 🤗SP-GRPO-7B |
+| Spatial Transformation | [🤗ST-GRPO-Zero-2B](https://huggingface.co/tanhuajie2001/Reason-RFT-Zero-Spatial-Transformation-Qwen2-VL-2B) | 🤗ST-GRPO-Zero-7B | [🤗ST-GRPO-2B](https://huggingface.co/tanhuajie2001/Reason-RFT-Spatial-Transformation-Qwen2-VL-2B) | 🤗ST-GRPO-7B | 
 | ***Embodied Tasks***   | ***🤖 Stay Turned***   | ***🤖 Stay Turned***   | ***🤖 Stay Turned***   | ***🤖 Stay Turned***  | 
 
 
