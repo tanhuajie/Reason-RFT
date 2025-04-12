@@ -61,6 +61,16 @@ Experimental results demonstrate Reasoning-RFT's three key advantages: **(1) Per
 </div>
 
 
+## <a id="ModelCheckpoints"> 🤗 Model Zoo</a>
+
+| Tasks                  | Reason-RFT-Zero-2B        | Reason-RFT-Zero-7B       | Reason-RFT-2B        | Reason-RFT-7B             |
+|------------------------|---------------------------|---------------------|---------------------------|---------------------------|
+| Visual Counting        | [🤗VC-Zero-Qwen2-VL-2B](https://huggingface.co/tanhuajie2001/Reason-RFT-Zero-Visual-Counting-Qwen2-VL-2B) | 🤗VC-Zero-Qwen2-VL-7B | [🤗VC-Qwen2-VL-2B](https://huggingface.co/tanhuajie2001/Reason-RFT-Visual-Counting-Qwen2-VL-2B) | 🤗VC-Qwen2-VL-7B |
+| Structure Perception   | [🤗SP-Zero-Qwen2-VL-2B](https://huggingface.co/tanhuajie2001/Reason-RFT-Zero-Structure-Perception-Qwen2-VL-2B) | 🤗SP-Zero-Qwen2-VL-7B | [🤗SP-Qwen2-VL-2B](https://huggingface.co/tanhuajie2001/Reason-RFT-Structure-Perception-Qwen2-VL-2B) | 🤗SP-Qwen2-VL-7B |
+| Spatial Transformation | [🤗ST-Zero-Qwen2-VL-2B](https://huggingface.co/tanhuajie2001/Reason-RFT-Zero-Spatial-Transformation-Qwen2-VL-2B) | 🤗ST-Zero-Qwen2-VL-7B | [🤗ST-Qwen2-VL-2B](https://huggingface.co/tanhuajie2001/Reason-RFT-Spatial-Transformation-Qwen2-VL-2B) | 🤗ST-Qwen2-VL-7B | 
+| ***Embodied Tasks***   | ***🤖 Stay Turned***   | ***🤖 Stay Turned***   | ***🤖 Stay Turned***   | ***🤖 Stay Turned***  | 
+
+
 ## <a id="GeneralVisualTasks"> 🎲 General Visual Reasoning Tasks</a>
 
 ### 🛠️ Setup
@@ -359,10 +369,10 @@ bash scripts/eval/open_source_models/calculate_score/calculate_score.sh
 ## 📑 Citation
 If you find this project useful, welcome to cite us.
 ```bib
-@article{tan2025reasonrft,
-    title={Reason-RFT: Reinforcement Fine-Tuning for Visual Reasoning}, 
-    author={Huajie Tan and Yuheng Ji and Xiaoshuai Hao and Minglan Lin and Pengwei Wang and Zhongyuan Wang and Shanghang Zhang},
-    journal={arXiv preprint arXiv:2503.20752},
-    year={2025}
+@article{tan2025reason,
+  title={Reason-RFT: Reinforcement Fine-Tuning for Visual Reasoning},
+  author={Tan, Huajie and Ji, Yuheng and Hao, Xiaoshuai and Lin, Minglan and Wang, Pengwei and Wang, Zhongyuan and Zhang, Shanghang},
+  journal={arXiv preprint arXiv:2503.20752},
+  year={2025}
 }
 ```
