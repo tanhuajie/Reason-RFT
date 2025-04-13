@@ -175,6 +175,7 @@ urllib3==2.3.0
 uvicorn==0.34.0
 uvloop==0.21.0
 virtualenv==20.29.1
+vllm==0.7.3
 wandb==0.19.5
 watchfiles==1.0.4
 websockets==14.2
