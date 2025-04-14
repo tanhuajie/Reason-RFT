@@ -54,6 +54,6 @@ torchrun --nproc_per_node=7 --nnodes=1 --master_port=29514 \
   --attn_implementation flash_attention_2 \
   --max_pixels 480000 \
   --save_steps 100 \
-  --num_train_epochs 1 \
+  --num_train_epochs 5 \
   --run_name ${WANDB_RUN_NAME} \
   2>&1 | tee ${OUTPUT_DIR}/train.log
