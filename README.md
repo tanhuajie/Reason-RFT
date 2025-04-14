@@ -48,7 +48,7 @@ Experimental results demonstrate Reasoning-RFT's three key advantages: **(1) Per
 
 ## 🗞️ News
 
-- **`2025-04-04`**: ✨ We released our [model zoo](https://github.com/tanhuajie/Reason-RFT?tab=readme-ov-file#--model-zoo) to huggingface.
+- **`2025-04-13`**: ✨ We released our [model zoo](https://github.com/tanhuajie/Reason-RFT?tab=readme-ov-file#--model-zoo) to huggingface.
 - **`2025-04-04`**: 🤗 We released our [datasets](https://huggingface.co/datasets/tanhuajie2001/Reason-RFT-CoT-Dataset/) to huggingface for [General Visual Reasoning Tasks](#GeneralVisualTasks).
 - **`2025-04-02`**: 🔥 We released codes and scripts for training/evaluation on [General Visual Reasoning Tasks](#GeneralVisualTasks).
 - **`2025-03-29`**: 🌍 We released the [repository](https://github.com/tanhuajie/Reason-RFT/) and [roadmap](#RoadMap) for **Reason-RFT**.
