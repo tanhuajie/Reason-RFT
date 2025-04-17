@@ -104,7 +104,7 @@ You should first thinks about the reasoning process internally and then provides
 
 CLEVR_MATH_SYSTEM_PROMPT = GENERAL_SYSTEM_PROMPT
 
-GEOQA_SYSTEM_PROMPT = GENERAL_SYSTEM_PROMPT
+GEOMATH_SYSTEM_PROMPT = GENERAL_SYSTEM_PROMPT
 
 
 # General question prompt copied from R1-V
@@ -260,4 +260,6 @@ Now, it's your turn!
 
 CLEVR_MATH_QUESTION_PROMPT = "{Question} Output the thinking process in <think> </think> and final answer (number) in <answer> </answer> tags."
 
-GEOQA_QUESTION_PROMPT = "{Question} Output the thinking process in <think> </think> and final answer (number or choice) in <answer> </answer> tags."
+GEOMATH_CHOICE_QUESTION_PROMPT = "{Question} Please select the correct answer by writing the letter (A, B, C or D) that precedes your choice.\nOutput the thinking process in <think> </think> and final answer (chosen letter) in <answer> </answer> tags."
+
+GEOMATH_NON_CHOICE_QUESTION_PROMPT = "{Question} Output the thinking process in <think> </think> and final answer (float number or int number) in <answer> </answer> tags."

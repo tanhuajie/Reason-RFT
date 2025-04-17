@@ -90,7 +90,10 @@ Now, it's your turn!
 PROMPT_STRUCTURE_PERCEPTION_ANS_SFT = "{Problem}"
 
 
-PROMPT_STRUCTURE_PERCEPTION_COT_SFT = "{Problem} Output the thinking process in <think> </think> and final answer (number or choice) in <answer> </answer> tags."
+PROMPT_STRUCTURE_PERCEPTION_CHOICE_COT_SFT = "{Question} Please select the correct answer by writing the letter (A, B, C or D) that precedes your choice.\nOutput the thinking process in <think> </think> and final answer (chosen letter) in <answer> </answer> tags."
+
+
+PROMPT_STRUCTURE_PERCEPTION_NON_CHOICE_COT_SFT = "{Question} Output the thinking process in <think> </think> and final answer (float number or int number) in <answer> </answer> tags."
 
 
 PROMPT_VISUAL_COUNTING_ANS_SFT = "{Problem}"

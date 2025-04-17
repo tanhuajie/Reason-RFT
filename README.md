@@ -196,6 +196,8 @@ Tips: {Prompt_xxx_ANS_SFT} can be found in ./utils/prompts.py, while {id}, {imag
 ```
 ```
 Tips: {Prompt_xxx_COT_SFT} can be found in ./utils/prompts.py, while {id}, {image}, {problem}, {cot} and {answer} are from Meta-Json files.
+
+Note: when refactor 'Structure Perception' task, {Prompt_xxx_COT_SFT} can be devided into 'PROMPT_STRUCTURE_PERCEPTION_CHOICE_COT_SFT' and 'PROMPT_STRUCTURE_PERCEPTION_NON_CHOICE_COT_SFT'. If 'A' or 'B' or 'C' or 'D' in {answer}, we use 'PROMPT_STRUCTURE_PERCEPTION_CHOICE_COT_SFT', otherwise, we use 'PROMPT_STRUCTURE_PERCEPTION_NON_CHOICE_COT_SFT'.
 ```
 
 **📑 3. For *Reason-RFT-Zero* training, we use RL format below to refactor each sample:**

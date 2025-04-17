@@ -125,8 +125,8 @@ def main(script_args, training_args, model_args):
             "length": len_reward,
         }
     elif script_args.task_name == "geomath":
-        SYSTEM_PROMPT = GEOQA_SYSTEM_PROMPT
-        QUESTION_PROMPT = GEOQA_QUESTION_PROMPT
+        SYSTEM_PROMPT = GEOMATH_SYSTEM_PROMPT
+        QUESTION_PROMPT = [GEOMATH_CHOICE_QUESTION_PROMPT, GEOMATH_NON_CHOICE_QUESTION_PROMPT]
         reward_funcs_registry = {
             "accuracy": accuracy_reward, # math_accuracy_reward,
             "format": format_reward,
@@ -151,6 +151,16 @@ def main(script_args, training_args, model_args):
         dataset = load_dataset('json', data_files=script_args.dataset_name)
         # Format into conversation (multi-image / single-image / text-only)
         def make_conversation(example, image_path=None, use_system_prompt=False):
+
+            # Specific question prompt should be used for specific type of sample
+            if 'geomath' in example['id']:
+                if example['answer'] in ['A', 'B', 'C', 'D']:
+                    SPEC_QUESTION_PROMPT = QUESTION_PROMPT[0]
+                else:
+                    SPEC_QUESTION_PROMPT = QUESTION_PROMPT[1]
+            else:
+                SPEC_QUESTION_PROMPT = QUESTION_PROMPT
+
             # multimodal sample
             if "image" in example and example["image"]:
                 if isinstance(example["image"], list):
@@ -190,7 +200,7 @@ def main(script_args, training_args, model_args):
                                 "role": "user",
                                 "content": [
                                     *[{"type": "image"} for _ in images],
-                                    {"type": "text", "text": QUESTION_PROMPT.format(Question=example["problem"])},
+                                    {"type": "text", "text": SPEC_QUESTION_PROMPT.format(Question=example["problem"])},
                                 ],
                             },
                         ],
@@ -209,7 +219,7 @@ def main(script_args, training_args, model_args):
                 else:
                     return {
                         "prompt": [
-                            {"role": "user", "content": QUESTION_PROMPT.format(Question=example["problem"])},
+                            {"role": "user", "content": SPEC_QUESTION_PROMPT.format(Question=example["problem"])},
                         ],
                     }
         
@@ -218,6 +228,16 @@ def main(script_args, training_args, model_args):
         dataset = load_dataset(script_args.dataset_name, name=script_args.dataset_config)
         # Format into conversation (single-image / text-only)
         def make_conversation_hf(example):
+
+            # Specific question prompt should be used for specific type of sample
+            if 'geomath' in example['id']:
+                if example['answer'] in ['A', 'B', 'C', 'D']:
+                    SPEC_QUESTION_PROMPT = QUESTION_PROMPT[0]
+                else:
+                    SPEC_QUESTION_PROMPT = QUESTION_PROMPT[1]
+            else:
+                SPEC_QUESTION_PROMPT = QUESTION_PROMPT
+
             # multimodal sample
             if "image" in example: # BUG Note: Not yet support for mix multimodal and text-only AND multi-images
                 if use_system_prompt:
@@ -240,7 +260,7 @@ def main(script_args, training_args, model_args):
                                 "role": "user",
                                 "content": [
                                     {"type": "image"},
-                                    {"type": "text", "text": QUESTION_PROMPT.format(Question=example["problem"])},
+                                    {"type": "text", "text": SPEC_QUESTION_PROMPT.format(Question=example["problem"])},
                                 ],
                             },
                         ],
@@ -257,7 +277,7 @@ def main(script_args, training_args, model_args):
                 else:
                     return {
                         "prompt": [
-                            {"role": "user", "content": QUESTION_PROMPT.format(Question=example["problem"])},
+                            {"role": "user", "content": SPEC_QUESTION_PROMPT.format(Question=example["problem"])},
                         ],
                     }
         dataset = dataset.map(make_conversation_hf)
