@@ -58,10 +58,11 @@ Now, it's your turn!
 
 COT_CLEVR_MATH_QUESTION_PROMPT = "{Question} Output the thinking process in <think> </think> and final answer (number) in <answer> </answer> tags."
 
-COT_GEOMATH_QUESTION_PROMPT = "{Question}  Output the thinking process in <think> </think> and final answer (number or choice) in <answer> </answer> tags."
+COT_GEOMATH_CHOICE_QUESTION_PROMPT = "{Question} Please select the correct answer by writing the letter (A, B, C or D) that precedes your choice.\nOutput the thinking process in <think> </think> and final answer (chosen letter) in <answer> </answer> tags."
+
+COT_GEOMATH_NON_CHOICE_QUESTION_PROMPT = "{Question} Output the thinking process in <think> </think> and final answer (float number or int number) in <answer> </answer> tags."
 
 COT_GEOMETRY_QUESTION_PROMPT = "{Question} Output the thinking process in <think> </think> and final answer (number or choice) in <answer> </answer> tags."
-
 
 COT_TRANCE_QUESTION_WITH_CAPTION_PROMPT = '''Your need to complete the spatial visual reasoning task according to the following rules.  
 
@@ -303,7 +304,7 @@ class VL_Evaluator():
             elif task_name in ["clevr-math", "super-clevr"]:
                 self.prompt = COT_CLEVR_MATH_QUESTION_PROMPT
             elif task_name in ["geomath"]:
-                self.prompt = COT_GEOMATH_QUESTION_PROMPT
+                self.prompt = [COT_GEOMATH_CHOICE_QUESTION_PROMPT, COT_GEOMATH_NON_CHOICE_QUESTION_PROMPT]
             elif task_name in ["geometry3k"]:
                 self.prompt = COT_GEOMETRY_QUESTION_PROMPT
         elif eval_type == "sft":
@@ -429,10 +430,31 @@ class QWEN_VL_Evaluator(VL_Evaluator):
                         "role": "user",
                         "content": [
                             *[{"type": "image"} for _ in images],
-                            {"type": "text", "text": self.prompt.format(Question=sample['problem_no_prompt'])},
+                            {"type": "text", "text": self.prompt.format(Question=sample['problem'])},
                         ],
                     }
                 ]
+            elif self.task_name == "geomath" and self.eval_type == "cot-sft":
+                if sample['answer'] in ['A', 'B', 'C', 'D']:
+                    messages = [
+                        {
+                            "role": "user",
+                            "content": [
+                                *[{"type": "image"} for _ in images],
+                                {"type": "text", "text": self.prompt[0].format(Question=sample['problem'])},
+                            ],
+                        }
+                    ]
+                else:
+                    messages = [
+                        {
+                            "role": "user",
+                            "content": [
+                                *[{"type": "image"} for _ in images],
+                                {"type": "text", "text": self.prompt[1].format(Question=sample['problem'])},
+                            ],
+                        }
+                    ]
             else:
                 messages = [
                     {
