@@ -18,11 +18,11 @@ def accuracy_reward(completions, solution, **kwargs):
         # Try string matching
         try:
             # Extract answer from solution if it has think/answer tags
-            sol_match = re.search(r'<answer>(.*?)</answer>', sol)
+            sol_match = re.search(r'<answer>(.*?)</answer>', sol, re.DOTALL)
             ground_truth = sol_match.group(1).strip() if sol_match else sol.strip()
             
             # Extract answer from content if it has think/answer tags
-            content_match = re.search(r'<answer>(.*?)</answer>', content)
+            content_match = re.search(r'<answer>(.*?)</answer>', content, re.DOTALL)
             student_answer = content_match.group(1).strip() if content_match else content.strip()
             
             # Compare the extracted answers
@@ -66,11 +66,11 @@ def math_accuracy_reward(completions, solution, **kwargs):
         # Try string matching
         try:
             # Extract answer from solution if it has think/answer tags
-            sol_match = re.search(r'<answer>(.*?)</answer>', sol)
+            sol_match = re.search(r'<answer>(.*?)</answer>', sol, re.DOTALL)
             ground_truth = sol_match.group(1).strip() if sol_match else sol.strip()
             
             # Extract answer from content if it has think/answer tags
-            content_match = re.search(r'<answer>(.*?)</answer>', content)
+            content_match = re.search(r'<answer>(.*?)</answer>', content, re.DOTALL)
             student_answer = content_match.group(1).strip() if content_match else content.strip()
             
             # Try to convert both answers to float for numerical comparison
@@ -142,7 +142,7 @@ def func_accuracy_reward(completions, solution, **kwargs):
         try:
             # Extract (func, object_id, value) pairs
             # Extract answer from content if it has think/answer tags
-            content_match = re.search(r'<answer>(.*?)</answer>', content)
+            content_match = re.search(r'<answer>(.*?)</answer>', content, re.DOTALL)
             content_match = content_match.group(1).strip() if content_match else content.strip()
             pred_list, repeat_panelty = extract_items(content_match)
             sol_list, _ = extract_items(sol)
@@ -231,7 +231,7 @@ def only_full_func_accuracy_reward(completions, solution, **kwargs):
         try:
             # Extract (func, object_id, value) pairs
             # Extract answer from content if it has think/answer tags
-            content_match = re.search(r'<answer>(.*?)</answer>', content)
+            content_match = re.search(r'<answer>(.*?)</answer>', content, re.DOTALL)
             content_match = content_match.group(1).strip() if content_match else content.strip()
             pred_list, repeat_panelty = extract_items(content_match)
             sol_list, _ = extract_items(sol)
@@ -287,7 +287,7 @@ def penalty_func_accuracy_reward(completions, solution, **kwargs):
         try:
             # Extract (func, object_id, value) pairs
             # Extract answer from content if it has think/answer tags
-            content_match = re.search(r'<answer>(.*?)</answer>', content)
+            content_match = re.search(r'<answer>(.*?)</answer>', content, re.DOTALL)
             content_match = content_match.group(1).strip() if content_match else content.strip()
             pred_list, repeat_panelty = extract_items(content_match)
             sol_list, _ = extract_items(sol)
@@ -413,11 +413,11 @@ def len_reward(completions, solution, current_step, **kwargs) -> float:
         # Try string matching
         try:
             # Extract answer from solution if it has think/answer tags
-            sol_match = re.search(r'<answer>(.*?)</answer>', sol)
+            sol_match = re.search(r'<answer>(.*?)</answer>', sol, re.DOTALL)
             ground_truth = sol_match.group(1).strip() if sol_match else sol.strip()
             
             # Extract answer from content if it has think/answer tags
-            content_match = re.search(r'<answer>(.*?)</answer>', content)
+            content_match = re.search(r'<answer>(.*?)</answer>', content, re.DOTALL)
             student_answer = content_match.group(1).strip() if content_match else content.strip()
             
             # Compare the extracted answers
