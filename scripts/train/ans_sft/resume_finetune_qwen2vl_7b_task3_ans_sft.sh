@@ -1,13 +1,6 @@
-export PYTHONPATH=$(pwd)/train/stage_sft
+conda activate reasonrft_sft
 
-export GLOO_SOCKET_IFNAME=bond0
-export NCCL_SOCKET_IFNAME=bond0
-export NCCL_DEBUG=INFO
-export NCCL_IB_DISABLE=0
-export NCCL_IB_CUDA_SUPPORT=1
-export NCCL_IB_GID_INDEX=3
-export OMP_NUM_THREADS=4
-export NCCL_IB_HCA=mlx5_0,mlx5_1
+export PYTHONPATH=$(pwd)/train/stage_sft
 
 export WANDB_MODE=offline
 export ACCELERATE_CPU_AFFINITY=1
