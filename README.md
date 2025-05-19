@@ -81,10 +81,15 @@ Experimental results demonstrate Reasoning-RFT's three key advantages: **(1) Per
 git clone https://github.com/tanhuajie/Reason-RFT.git
 cd Reason-RFT
 
-# build conda env.
-conda create -n reasonrft python=3.10
-conda activate reasonrft
-pip install -r requirements.txt
+# build conda env. for stage_rl
+conda create -n reasonrft_rl python=3.10
+conda activate reasonrft_rl
+pip install -r requirements_rl.txt
+
+# build conda env. for stage_sft
+conda create -n reasonrft_sft python=3.10
+conda activate reasonrft_sft
+pip install -r requirements_sft.txt
 ```
 
 ### <a id="Preparation"> ♣️ Dataset Preparation</a>
@@ -162,7 +167,7 @@ Reason-RFT-CoT-Dataset/
     "image": "{image}",
     "messages": [
         {
-            "content": "{PROMPT_xxx_ANS_SFT} + {problem}",
+            "content": "{PROMPT_xxx_ANS_SFT} + <image> + {problem}",
             "role": "user"
         },
         {
@@ -184,7 +189,7 @@ Tips: {Prompt_xxx_ANS_SFT} can be found in ./utils/prompts.py, while {id}, {imag
     "image": "{image}",
     "messages": [
         {
-            "content": "{PROMPT_xxx_COT_SFT} + {problem}",
+            "content": "{PROMPT_xxx_COT_SFT} + <image> + {problem}",
             "role": "user"
         },
         {

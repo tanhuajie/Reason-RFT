@@ -1,14 +1,6 @@
 #!/bin/bash
-export PYTHONPATH=$(pwd)/train/stage_rl
-export GLOO_SOCKET_IFNAME=bond0
-export NCCL_SOCKET_IFNAME=bond0
-export NCCL_DEBUG=INFO
-export NCCL_IB_DISABLE=0
-export NCCL_IB_CUDA_SUPPORT=1
-export NCCL_IB_GID_INDEX=3
-export OMP_NUM_THREADS=4
-export NCCL_IB_HCA=mlx5_0,mlx5_1
-
+conda activate reasonrft_rl
+export PYTHONPATH=$(pwd)/train
 # Wandb
 # export WANDB_MODE=disabled
 export WANDB_BASE_URL=https://api.wandb.ai
@@ -50,7 +42,7 @@ torchrun --nproc_per_node=7 --nnodes=1 --master_port=29514 \
   --logging_steps 1 \
   --bf16 \
   --report_to wandb \
-  --gradient_checkpointing false \
+  --gradient_checkpointing true \
   --attn_implementation flash_attention_2 \
   --max_pixels 480000 \
   --save_steps 100 \
