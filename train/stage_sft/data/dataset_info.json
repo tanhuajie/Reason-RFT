@@ -4,7 +4,7 @@
     "formatting": "sharegpt",
     "columns": {
       "messages": "messages",
-      "images": "images"
+      "images": "image"
     },
     "tags": {
       "role_tag": "role",
@@ -18,7 +18,7 @@
     "formatting": "sharegpt",
     "columns": {
       "messages": "messages",
-      "images": "images"
+      "images": "image"
     },
     "tags": {
       "role_tag": "role",
@@ -32,7 +32,7 @@
     "formatting": "sharegpt",
     "columns": {
       "messages": "messages",
-      "images": "images"
+      "images": "image"
     },
     "tags": {
       "role_tag": "role",
@@ -46,7 +46,7 @@
     "formatting": "sharegpt",
     "columns": {
       "messages": "messages",
-      "images": "images"
+      "images": "image"
     },
     "tags": {
       "role_tag": "role",
@@ -60,7 +60,7 @@
     "formatting": "sharegpt",
     "columns": {
       "messages": "messages",
-      "images": "images"
+      "images": "image"
     },
     "tags": {
       "role_tag": "role",
@@ -74,7 +74,7 @@
     "formatting": "sharegpt",
     "columns": {
       "messages": "messages",
-      "images": "images"
+      "images": "image"
     },
     "tags": {
       "role_tag": "role",
@@ -88,7 +88,7 @@
     "formatting": "sharegpt",
     "columns": {
       "messages": "messages",
-      "images": "images"
+      "images": "image"
     },
     "tags": {
       "role_tag": "role",
@@ -102,7 +102,7 @@
     "formatting": "sharegpt",
     "columns": {
       "messages": "messages",
-      "images": "images"
+      "images": "image"
     },
     "tags": {
       "role_tag": "role",
@@ -116,7 +116,7 @@
     "formatting": "sharegpt",
     "columns": {
       "messages": "messages",
-      "images": "images"
+      "images": "image"
     },
     "tags": {
       "role_tag": "role",
@@ -130,7 +130,7 @@
     "formatting": "sharegpt",
     "columns": {
       "messages": "messages",
-      "images": "images"
+      "images": "image"
     },
     "tags": {
       "role_tag": "role",
