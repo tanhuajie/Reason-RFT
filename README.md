@@ -10,7 +10,7 @@
 </p>
 
 <p align="center">
-</a>&nbsp&nbsp🤖 <a href="https://github.com/FlagOpen/RoboBrain/">RoboBrain 1.0</a> </a>&nbsp&nbsp🤖 <a href="https://github.com/FlagOpen/RoboBrain2.0/">RoboBrain 2.0</a>: Aim to Explore ReasonRFT Paradigm to Enhance RoboBrain's Embodied Reasoning Capabilities.
+</a>&nbsp&nbsp🤖 <a href="https://github.com/FlagOpen/RoboBrain/">RoboBrain 1.0</a> </a>&nbsp&nbsp🤖 <a href="https://github.com/FlagOpen/RoboBrain2.0/">RoboBrain 2.0</a>: Aim to Explore ReasonRFT Paradigm to Enhance RoboBrain's Embodied Reasoning Capabilities, e.g. Planning, Affordance, Trajectory and Pointing.
 </p>
 
 ## 🔥 Overview
@@ -43,12 +43,12 @@ Experimental results demonstrate Reasoning-RFT's three key advantages: **(1) Per
     - Training and evaluating for **Embodied Planning**: Please refer to [Embodied Planning Section](#EmbodiedVisualReasoningTasks).
     - Training and evaluating for **Embodied Affordance**: Please refer to [Embodied Affordance Section](#EmbodiedVisualReasoningTasks).
     - Training and evaluating for **Embodied Trajectory**: Please refer to [Embodied Trajectory Section](#EmbodiedVisualReasoningTasks).
-- **`Support HF/VLLM Inference`**: Please see [Inference Section](#Inference) for detail.
+    - Training and evaluating for **Embodied Pointing**: Please refer to [Embodied Pointing Section](#EmbodiedVisualReasoningTasks).
 
 
 ## 🗞️ News
 
-- **`2025-06-06`**: 🤖 We're excited to announce the release of our more powerful [RoboBrain 2.0](https://github.com/FlagOpen/RoboBrain2.0).
+- **`2025-06-06`**: 🤖 We're excited to announce the release of our more powerful [RoboBrain 2.0](https://github.com/FlagOpen/RoboBrain2.0) using Reason-RFT.
 - **`2025-04-13`**: ✨ We released our [model zoo](https://github.com/tanhuajie/Reason-RFT?tab=readme-ov-file#--model-zoo) to huggingface.
 - **`2025-04-04`**: 🤗 We released our [datasets](https://huggingface.co/datasets/tanhuajie2001/Reason-RFT-CoT-Dataset/) to huggingface for [General Visual Reasoning Tasks](#GeneralVisualTasks).
 - **`2025-04-02`**: 🔥 We released codes and scripts for training/evaluation on [General Visual Reasoning Tasks](#GeneralVisualTasks).
@@ -70,8 +70,8 @@ Experimental results demonstrate Reasoning-RFT's three key advantages: **(1) Per
 | Visual Counting        | [🤗VC-GRPO-Zero-2B](https://huggingface.co/tanhuajie2001/Reason-RFT-Zero-Visual-Counting-Qwen2-VL-2B) | [🤗VC-GRPO-Zero-7B](https://huggingface.co/tanhuajie2001/Reason-RFT-Zero-Visual-Counting-Qwen2-VL-7B) | [🤗VC-GRPO-2B](https://huggingface.co/tanhuajie2001/Reason-RFT-Visual-Counting-Qwen2-VL-2B) | [🤗VC-GRPO-7B](https://huggingface.co/tanhuajie2001/Reason-RFT-Visual-Counting-Qwen2-VL-7B) |
 | Structure Perception   | [🤗SP-GRPO-Zero-2B](https://huggingface.co/tanhuajie2001/Reason-RFT-Zero-Structure-Perception-Qwen2-VL-2B) | [🤗SP-GRPO-Zero-7B](https://huggingface.co/tanhuajie2001/Reason-RFT-Zero-Structure-Perception-Qwen2-VL-7B) | [🤗SP-GRPO-2B](https://huggingface.co/tanhuajie2001/Reason-RFT-Structure-Perception-Qwen2-VL-2B) | [🤗SP-GRPO-7B](https://huggingface.co/tanhuajie2001/Reason-RFT-Structure-Perception-Qwen2-VL-7B) |
 | Spatial Transformation | [🤗ST-GRPO-Zero-2B](https://huggingface.co/tanhuajie2001/Reason-RFT-Zero-Spatial-Transformation-Qwen2-VL-2B) | [🤗ST-GRPO-Zero-7B](https://huggingface.co/tanhuajie2001/Reason-RFT-Zero-Spatial-Transformation-Qwen2-VL-7B) | [🤗ST-GRPO-2B](https://huggingface.co/tanhuajie2001/Reason-RFT-Spatial-Transformation-Qwen2-VL-2B) | [🤗ST-GRPO-7B](https://huggingface.co/tanhuajie2001/Reason-RFT-Spatial-Transformation-Qwen2-VL-7B) | 
-| ***Embodied Tasks***   | 🤖 *Stay Turned*   | 🤖 *Stay Turned*   | 🤖 *Stay Turned*   | 🤖 *Stay Turned*  | 
 
+**Note: Please refer to [RoboBrain 2.0 Github](https://github.com/FlagOpen/RoboBrain2.0) for the embodied usage of RoboBrain 2.0**
 
 ## <a id="GeneralVisualTasks"> 🎲 General Visual Reasoning Tasks</a>
 
@@ -382,6 +382,13 @@ If you find this project useful, welcome to cite us.
   title={Reason-RFT: Reinforcement Fine-Tuning for Visual Reasoning},
   author={Tan, Huajie and Ji, Yuheng and Hao, Xiaoshuai and Lin, Minglan and Wang, Pengwei and Wang, Zhongyuan and Zhang, Shanghang},
   journal={arXiv preprint arXiv:2503.20752},
+  year={2025}
+}
+
+@article{ji2025robobrain,
+  title={RoboBrain: A Unified Brain Model for Robotic Manipulation from Abstract to Concrete},
+  author={Ji, Yuheng and Tan, Huajie and Shi, Jiayu and Hao, Xiaoshuai and Zhang, Yuan and Zhang, Hengyuan and Wang, Pengwei and Zhao, Mengdi and Mu, Yao and An, Pengju and others},
+  journal={arXiv preprint arXiv:2502.21257},
   year={2025}
 }
 ```
