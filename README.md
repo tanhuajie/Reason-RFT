@@ -10,7 +10,7 @@
 </p>
 
 <p align="center">
-</a>&nbsp&nbsp🤖 <a href="https://github.com/FlagOpen/RoboBrain/">RoboBrain</a>: Aim to Explore ReasonRFT Paradigm to Enhance RoboBrain's Embodied Reasoning Capabilities.
+</a>&nbsp&nbsp🤖 <a href="https://github.com/FlagOpen/RoboBrain/">RoboBrain 1.0</a> </a>&nbsp&nbsp🤖 <a href="https://github.com/FlagOpen/RoboBrain2.0/">RoboBrain 2.0</a>: Aim to Explore ReasonRFT Paradigm to Enhance RoboBrain's Embodied Reasoning Capabilities.
 </p>
 
 ## 🔥 Overview
@@ -48,6 +48,7 @@ Experimental results demonstrate Reasoning-RFT's three key advantages: **(1) Per
 
 ## 🗞️ News
 
+- **`2025-06-06`**: 🤖 We're excited to announce the release of our more powerful [RoboBrain 2.0](https://github.com/FlagOpen/RoboBrain2.0).
 - **`2025-04-13`**: ✨ We released our [model zoo](https://github.com/tanhuajie/Reason-RFT?tab=readme-ov-file#--model-zoo) to huggingface.
 - **`2025-04-04`**: 🤗 We released our [datasets](https://huggingface.co/datasets/tanhuajie2001/Reason-RFT-CoT-Dataset/) to huggingface for [General Visual Reasoning Tasks](#GeneralVisualTasks).
 - **`2025-04-02`**: 🔥 We released codes and scripts for training/evaluation on [General Visual Reasoning Tasks](#GeneralVisualTasks).
@@ -371,7 +372,7 @@ bash scripts/eval/open_source_models/calculate_score/calculate_score.sh
 *Note: For more detail results, please refer to our [main paper and appendix](https://arxiv.org/abs/2503.20752)*
 
 ## <a id="EmbodiedVisualReasoningTasks"> 🤖 Embodied Visual Reasoning Tasks</a>
-***Please Stay Tuned ...***
+We apply Reason-RFT to train more powerful RoboBrain 2.0. Please refer to [RoboBrain 2.0 Github](https://github.com/FlagOpen/RoboBrain2.0) for more details.
 
 
 ## 📑 Citation
