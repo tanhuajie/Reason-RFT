@@ -70,8 +70,8 @@ Experimental results demonstrate Reasoning-RFT's three key advantages: **(1) Per
 | Visual Counting        | [🤗VC-GRPO-Zero-2B](https://huggingface.co/tanhuajie2001/Reason-RFT-Zero-Visual-Counting-Qwen2-VL-2B) | [🤗VC-GRPO-Zero-7B](https://huggingface.co/tanhuajie2001/Reason-RFT-Zero-Visual-Counting-Qwen2-VL-7B) | [🤗VC-GRPO-2B](https://huggingface.co/tanhuajie2001/Reason-RFT-Visual-Counting-Qwen2-VL-2B) | [🤗VC-GRPO-7B](https://huggingface.co/tanhuajie2001/Reason-RFT-Visual-Counting-Qwen2-VL-7B) |
 | Structure Perception   | [🤗SP-GRPO-Zero-2B](https://huggingface.co/tanhuajie2001/Reason-RFT-Zero-Structure-Perception-Qwen2-VL-2B) | [🤗SP-GRPO-Zero-7B](https://huggingface.co/tanhuajie2001/Reason-RFT-Zero-Structure-Perception-Qwen2-VL-7B) | [🤗SP-GRPO-2B](https://huggingface.co/tanhuajie2001/Reason-RFT-Structure-Perception-Qwen2-VL-2B) | [🤗SP-GRPO-7B](https://huggingface.co/tanhuajie2001/Reason-RFT-Structure-Perception-Qwen2-VL-7B) |
 | Spatial Transformation | [🤗ST-GRPO-Zero-2B](https://huggingface.co/tanhuajie2001/Reason-RFT-Zero-Spatial-Transformation-Qwen2-VL-2B) | [🤗ST-GRPO-Zero-7B](https://huggingface.co/tanhuajie2001/Reason-RFT-Zero-Spatial-Transformation-Qwen2-VL-7B) | [🤗ST-GRPO-2B](https://huggingface.co/tanhuajie2001/Reason-RFT-Spatial-Transformation-Qwen2-VL-2B) | [🤗ST-GRPO-7B](https://huggingface.co/tanhuajie2001/Reason-RFT-Spatial-Transformation-Qwen2-VL-7B) | 
+| Embodied Tasks         | Please refer to [RoboBrain 2.0 Github](https://github.com/FlagOpen/RoboBrain2.0) for the embodied usage of RoboBrain 2.0 |
 
-**Note: Please refer to [RoboBrain 2.0 Github](https://github.com/FlagOpen/RoboBrain2.0) for the embodied usage of RoboBrain 2.0**
 
 ## <a id="GeneralVisualTasks"> 🎲 General Visual Reasoning Tasks</a>
 
