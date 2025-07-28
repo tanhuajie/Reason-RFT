@@ -34,8 +34,8 @@ def get_score_from_json_clevr(file_path):
     
     # Process data to calculate scores
     for item in data:
-        item_type = item["level"]
-        score = get_score_clevr(item["pred"], item["solution"])
+        item_type = "default"
+        score = get_score_clevr(item["pred"], item["answer"])
         item["score"] = score
         type_scores[item_type].append(score)
     
@@ -78,8 +78,8 @@ def get_score_from_json_geomath(file_path, enhance=False):
     
     # Process data to calculate scores
     for item in data:
-        item_type = "choice" if item["solution"] in ["A", "B", "C", "D"] else "non_choice"
-        score = get_score_geomath(item["pred"], item["solution"], enhance)
+        item_type = "choice" if item["answer"] in ["A", "B", "C", "D"] else "non_choice"
+        score = get_score_geomath(item["pred"], item["answer"], enhance)
         item["score"] = score
         type_scores[item_type].append(score)
     
@@ -162,8 +162,8 @@ def get_score_from_json_trance(file_path):
     
     # Process data to calculate scores
     for item in data:
-        item_type = item["type"]
-        score = get_score_trance(item["pred"], item["solution"])
+        item_type = "default"
+        score = get_score_trance(item["pred"], item["answer"])
         item["score"] = score
         type_scores[item_type].append(score)
     
@@ -209,7 +209,7 @@ def get_score_from_json_geometry3k(file_path, enhance=False):
     
     # Process data to calculate scores
     for item in tqdm(data):
-        item_type = item["type"] if "type" in item else "Non-CHOICE"
+        item_type = "choice" if item["answer"] in ["A", "B", "C", "D"] else "non_choice"
         score = get_score_geometry3k(item["pred"], item["answer"], enhance)
         item["score"] = score
         type_scores[item_type].append(score)
@@ -234,7 +234,7 @@ if __name__ == "__main__":
 
     print(f"==============================================================")
     try:
-        json_path = os.path.join(args.ckpt_path, "eval_result", "clevr-math.json")
+        json_path = os.path.join(args.ckpt_path, "vision-r1-result", "clevr-math.json")
         print(json_path)
         get_score_from_json_clevr(json_path)
     except:
@@ -243,7 +243,7 @@ if __name__ == "__main__":
     print(f"==============================================================")
 
     try:
-        json_path = os.path.join(args.ckpt_path, "eval_result", "super-clevr.json")
+        json_path = os.path.join(args.ckpt_path, "vision-r1-result", "super-clevr.json")
         print(json_path)
         get_score_from_json_clevr(json_path)
     except:
@@ -252,7 +252,7 @@ if __name__ == "__main__":
     print(f"==============================================================")
 
     try:
-        json_path = os.path.join(args.ckpt_path, "eval_result", "geomath.json")
+        json_path = os.path.join(args.ckpt_path, "vision-r1-result", "geomath.json")
         print(json_path)
         get_score_from_json_geomath(json_path)
     except:
@@ -261,7 +261,7 @@ if __name__ == "__main__":
     print(f"==============================================================")
 
     try:
-        json_path = os.path.join(args.ckpt_path, "eval_result", "geometry3k.json")
+        json_path = os.path.join(args.ckpt_path, "vision-r1-result", "geometry3k.json")
         print(json_path)
         get_score_from_json_geometry3k(json_path)
     except:
@@ -270,7 +270,7 @@ if __name__ == "__main__":
     print(f"==============================================================")
 
     try:
-        json_path = os.path.join(args.ckpt_path, "eval_result", "trance.json")
+        json_path = os.path.join(args.ckpt_path, "vision-r1-result", "trance.json")
         print(json_path)
         get_score_from_json_trance(json_path)
     except:
@@ -279,7 +279,7 @@ if __name__ == "__main__":
     print(f"==============================================================")
 
     try:
-        json_path = os.path.join(args.ckpt_path, "eval_result", "trance-left.json")
+        json_path = os.path.join(args.ckpt_path, "vision-r1-result", "trance-left.json")
         print(json_path)
         get_score_from_json_trance(json_path)
     except:
@@ -288,7 +288,7 @@ if __name__ == "__main__":
     print(f"==============================================================")
 
     try:
-        json_path = os.path.join(args.ckpt_path, "eval_result", "trance-right.json")
+        json_path = os.path.join(args.ckpt_path, "vision-r1-result", "trance-right.json")
         print(json_path)
         get_score_from_json_trance(json_path)
     except:
