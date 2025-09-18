@@ -47,7 +47,7 @@ Experimental results demonstrate Reasoning-RFT's three key advantages: **(1) Per
 
 
 ## 🗞️ News
-
+- **`2025-09-18`**: 🔥 **Reason-RFT** gets accepted to NeurIPS 2025! See you in Mexico City and San Diego, USA!
 - **`2025-06-06`**: 🤖 We're excited to announce the release of our more powerful [RoboBrain 2.0](https://github.com/FlagOpen/RoboBrain2.0) using Reason-RFT.
 - **`2025-04-13`**: ✨ We released our [model zoo](https://github.com/tanhuajie/Reason-RFT?tab=readme-ov-file#--model-zoo) to huggingface.
 - **`2025-04-04`**: 🤗 We released our [datasets](https://huggingface.co/datasets/tanhuajie2001/Reason-RFT-CoT-Dataset/) to huggingface for [General Visual Reasoning Tasks](#GeneralVisualTasks).
