@@ -1,9 +1,4 @@
-<div align="center">
-<img src="./assets/logo.png" width="500"/>
-</div>
-
-# Reason-RFT
-**Reason-RFT: Reinforcement Fine-Tuning for Visual Reasoning.**
+<h1 align="center">Reason-RFT: Reinforcement Fine-Tuning for Visual Reasoning of Vision Language Models</h1>
 
 <p align="center">
     </a>&nbsp&nbsp⭐️ <a href="https://tanhuajie.github.io/ReasonRFT/">Project</a></a>&nbsp&nbsp │ &nbsp&nbsp🌎 <a href="https://huggingface.co/datasets/tanhuajie2001/Reason-RFT-CoT-Dataset">Dataset</a>&nbsp&nbsp │ &nbsp&nbsp🤗 <a href="https://github.com/tanhuajie/Reason-RFT?tab=readme-ov-file#--model-zoo">Models</a>&nbsp&nbsp │ &nbsp&nbsp📑 <a href="https://arxiv.org/abs/2503.20752">ArXiv</a>&nbsp&nbsp │ &nbsp&nbsp💬 <a href="./assets/wechat.png">WeChat</a>
@@ -12,6 +7,10 @@
 <p align="center">
 </a>&nbsp&nbsp🤖 <a href="https://github.com/FlagOpen/RoboBrain/">RoboBrain 1.0</a> </a>&nbsp&nbsp🤖 <a href="https://github.com/FlagOpen/RoboBrain2.0/">RoboBrain 2.0</a>: Aim to Explore ReasonRFT Paradigm to Enhance RoboBrain's Embodied Reasoning Capabilities, e.g. Planning, Affordance, Trajectory and Pointing.
 </p>
+
+<div align="center">
+<img src="./assets/logo.png" width="500"/>
+</div>
 
 ## 🔥 Overview
 Visual reasoning abilities play a crucial role in understanding complex multimodal data, advancing both domain-specific applications and artificial general intelligence (AGI).
