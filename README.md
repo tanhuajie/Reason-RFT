@@ -1,11 +1,11 @@
 <h1 align="center">Reason-RFT: Reinforcement Fine-Tuning for Visual Reasoning of Vision Language Models</h1>
 
 <p align="center">
-    </a>&nbsp&nbsp⭐️ <a href="https://tanhuajie.github.io/ReasonRFT/">Project</a></a>&nbsp&nbsp │ &nbsp&nbsp🌎 <a href="https://huggingface.co/datasets/tanhuajie2001/Reason-RFT-CoT-Dataset">Dataset</a>&nbsp&nbsp │ &nbsp&nbsp🤗 <a href="https://github.com/tanhuajie/Reason-RFT?tab=readme-ov-file#--model-zoo">Models</a>&nbsp&nbsp │ &nbsp&nbsp📑 <a href="https://arxiv.org/abs/2503.20752">ArXiv</a>&nbsp&nbsp │ &nbsp&nbsp💬 <a href="./assets/wechat.png">WeChat</a>
+    </a>&nbsp&nbsp⭐️ <a href="https://tanhuajie.github.io/ReasonRFT/">Project</a></a>&nbsp&nbsp │ &nbsp&nbsp🌎 <a href="https://huggingface.co/datasets/tanhuajie2001/Reason-RFT-CoT-Dataset">Dataset</a>&nbsp&nbsp │ &nbsp&nbsp🤗 <a href="https://github.com/tanhuajie/Reason-RFT?tab=readme-ov-file#--model-zoo">Models</a>&nbsp&nbsp │ &nbsp&nbsp📑 <a href="https://arxiv.org/abs/2503.20752">Paper</a>&nbsp&nbsp │ &nbsp&nbsp💬 <a href="./assets/wechat.png">WeChat</a>
 </p>
 
 <p align="center">
-</a>&nbsp&nbsp🤖 <a href="https://github.com/FlagOpen/RoboBrain/">RoboBrain 1.0</a> </a>&nbsp&nbsp🤖 <a href="https://github.com/FlagOpen/RoboBrain2.0/">RoboBrain 2.0</a>: Aim to Explore ReasonRFT Paradigm to Enhance RoboBrain's Embodied Reasoning Capabilities, e.g. Planning, Affordance, Trajectory and Pointing.
+</a>&nbsp&nbsp🤖 <a href="https://github.com/FlagOpen/RoboBrain2.0/">RoboBrain 2.0</a>: Explore Embodied Visual Reasoning Capabilities with <strong>Reason-RFT</strong>.
 </p>
 
 <div align="center">
