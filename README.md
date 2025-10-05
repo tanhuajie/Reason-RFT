@@ -384,6 +384,13 @@ If you find this project useful, welcome to cite us.
   year={2025}
 }
 
+@article{team2025robobrain,
+  title={Robobrain 2.0 technical report},
+  author={Team, BAAI RoboBrain and Cao, Mingyu and Tan, Huajie and Ji, Yuheng and Lin, Minglan and Li, Zhiyu and Cao, Zhou and Wang, Pengwei and Zhou, Enshen and Han, Yi and others},
+  journal={arXiv preprint arXiv:2507.02029},
+  year={2025}
+}
+
 @article{ji2025robobrain,
   title={RoboBrain: A Unified Brain Model for Robotic Manipulation from Abstract to Concrete},
   author={Ji, Yuheng and Tan, Huajie and Shi, Jiayu and Hao, Xiaoshuai and Zhang, Yuan and Zhang, Hengyuan and Wang, Pengwei and Zhao, Mengdi and Mu, Yao and An, Pengju and others},
