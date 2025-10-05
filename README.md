@@ -371,8 +371,11 @@ bash scripts/eval/open_source_models/calculate_score/calculate_score.sh
 *Note: For more detail results, please refer to our [main paper and appendix](https://arxiv.org/abs/2503.20752)*
 
 ## <a id="EmbodiedVisualReasoningTasks"> 🤖 Embodied Visual Reasoning Tasks</a>
-We apply Reason-RFT to train more powerful RoboBrain 2.0. Please refer to [RoboBrain 2.0 Github](https://github.com/FlagOpen/RoboBrain2.0) for more details.
+We apply Reason-RFT to train more powerful RoboBrain 2.0. Please refer to [RoboBrain 2.0 Github](https://github.com/FlagOpen/RoboBrain2.0) for more details. Here is a simplified comparison result (not the final version):
 
+<div align="center">
+<img src="./assets/rb2_res.png" />
+</div>
 
 ## 📑 Citation
 If you find this project useful, welcome to cite us.
